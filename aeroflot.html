@@ -21,7 +21,12 @@ body { font-family: Arial, sans-serif; background: var(--bg); color: #222; displ
 .nav a:hover { color: var(--primary); }
 .lang-switch { display: flex; gap: 8px; align-items: center; }
 .lang-switch img { width: 24px; height: 16px; cursor: pointer; border: 1px solid #ccc; }
-.alliance-logo img { height: 32px; margin-left: 12px; }
+.alliance-logo img {
+  height: 32px;        /* zachowujemy wysokość */
+  width: auto;         /* szerokość automatyczna, proporcjonalna do oryginalnego loga */
+  margin-left: 12px;
+}
+
 .container { flex: 1; display: flex; flex-direction: column; justify-content: center; max-width: 900px; margin: auto; padding: 20px; }
 .hero { background: white; padding: 20px; border-radius: var(--radius); margin-bottom: 20px; box-shadow: 0 4px 12px rgba(0,0,0,0.05); }
 .hero h1 { margin-bottom: 8px; color: var(--primary); }
@@ -40,7 +45,7 @@ body { font-family: Arial, sans-serif; background: var(--bg); color: #222; displ
 <body>
 <header class="topbar">
   <div class="logo">
-    <img src="https://static.routesonline.com/images/cached/organisation-2635-scaled-300x130.png" alt="Aeroflot Logo">
+    <img src="https://images.seeklogo.com/logo-png/17/2/aeroflot-airline-logo-png_seeklogo-172628.png" alt="Aeroflot Logo">
     <nav class="nav">
       <a href="index.html">LOT Polish Airlines</a>
       <a href="eurolot.html">Eurolot</a>
@@ -122,5 +127,6 @@ document.addEventListener('DOMContentLoaded', function() {
 </script>
 </body>
 </html>
+
 
 
