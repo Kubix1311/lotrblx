@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Aeroflot PL - Главная</title>
+<style>
+:root {
+  --primary: #003399; /* niebieski */
+  --accent: #c8102e;  /* czerwony */
+  --bg: #f8f8f8;
+  --card: #ffffff;
+  --muted: #555;
+  --radius: 14px;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: Arial, sans-serif; background: var(--bg); color: #222; display: flex; flex-direction: column; min-height: 100vh; }
+.topbar { display: flex; justify-content: space-between; align-items: center; padding: 14px 28px; background: rgba(255,255,255,0.9); box-shadow: 0 2px 10px rgba(0,0,0,0.05); }
+.logo img { height: 40px; }
+.nav a { margin-left: 14px; text-decoration: none; color: var(--muted); }
+.nav a:hover { color: var(--primary); }
+.lang-switch { display: flex; gap: 8px; align-items: center; }
+.lang-switch img { width: 24px; height: 16px; cursor: pointer; border: 1px solid #ccc; }
+.alliance-logo img { height: 32px; margin-left: 12px; }
+.container { flex: 1; display: flex; flex-direction: column; justify-content: center; max-width: 900px; margin: auto; padding: 20px; }
+.hero { background: white; padding: 20px; border-radius: var(--radius); margin-bottom: 20px; box-shadow: 0 4px 12px rgba(0,0,0,0.05); }
+.hero h1 { margin-bottom: 8px; color: var(--primary); }
+.grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; margin-bottom: 20px; }
+.card { background: var(--card); padding: 16px; border-radius: 10px; text-align: center; box-shadow: 0 4px 12px rgba(0,0,0,0.05); }
+.card h3 { margin-bottom: 8px; color: var(--primary); }
+.card p { color: var(--accent); }
+.card a { display: inline-block; margin-top: 8px; font-size: 14px; color: var(--primary); text-decoration: underline; }
+.book-btn { display: inline-block; background: var(--primary); color: var(--accent); padding: 10px 16px; border-radius: 10px; margin-top: 18px; text-decoration: none; }
+.book-btn:hover { background: #002070; }
+.site-footer { background: #fff; border-top: 1px solid #ddd; padding: 12px 20px; text-align: center; }
+.footer-links a { margin: 0 10px; color: var(--muted); text-decoration: none; font-size: 14px; }
+.footer-links a:hover { color: var(--primary); }
+</style>
+</head>
+<body>
+<header class="topbar">
+  <div class="logo">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/5/55/Aeroflot_logo_2020.svg" alt="Aeroflot Logo">
+    <nav class="nav">
+      <a href="index.html">LOT Polish Airlines</a>
+      <a href="eurolot.html">Eurolot</a>
+      <a href="#">Aeroflot PL</a>
+      <a href="ukrainian.html">Ukrainian Airlines</a>
+    </nav>
+  </div>
+  <div class="lang-switch">
+    <img src="https://flagcdn.com/w20/ru.png" alt="RU" onclick="setLang('ru')">
+    <img src="https://flagcdn.com/w20/pl.png" alt="PL" onclick="setLang('pl')">
+    <img src="https://flagcdn.com/w20/gb.png" alt="EN" onclick="setLang('en')">
+    <div class="alliance-logo">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/7/7b/Star_Alliance_logo.svg" alt="Star Alliance">
+    </div>
+  </div>
+</header>
+
+<main class="container">
+  <section class="hero">
+    <h1 data-ru="Добро пожаловать в Aeroflot PL" data-pl="Witamy w Aeroflot PL" data-en="Welcome to Aeroflot PL">
+      Добро пожаловать в Aeroflot PL
+    </h1>
+    <p data-ru="Российско-польская авиалиния в Roblox." data-pl="Rosyjsko-polska linia lotnicza w Roblox." data-en="Russian-Polish airline in Roblox.">
+      Российско-польская авиалиния в Roblox.
+    </p>
+  </section>
+
+  <section class="grid">
+    <div class="card">
+      <h3 data-ru="Галерея" data-pl="Galeria" data-en="Gallery">Галерея</h3>
+      <p data-ru="Смотрите наши фотографии" data-pl="Zobacz nasze zdjęcia" data-en="See our photos">Смотрите наши фотографии</p>
+      <a href="galeria.html" data-ru="Смотреть больше" data-pl="Zobacz więcej" data-en="See more">Смотреть больше</a>
+    </div>
+    <div class="card">
+      <h3 data-ru="Флот" data-pl="Flota" data-en="Fleet">Флот</h3>
+      <p data-ru="Узнайте о наших самолётах" data-pl="Poznaj nasze samoloty" data-en="Discover our aircraft">Узнайте о наших самолётах</p>
+      <a href="flota.html" data-ru="Смотреть больше" data-pl="Zobacz więcej" data-en="See more">Смотреть больше</a>
+    </div>
+    <div class="card">
+      <h3 data-ru="Рейсы" data-pl="Loty" data-en="Flights">Рейсы</h3>
+      <p data-ru="Проверьте ближайшие рейсы" data-pl="Sprawdź najbliższe loty" data-en="Check upcoming flights">Проверьте ближайшие рейсы</p>
+      <a href="loty.html" data-ru="Смотреть больше" data-pl="Zobacz więcej" data-en="See more">Смотреть больше</a>
+    </div>
+    <div class="card">
+      <h3 data-ru="О нас" data-pl="O nas" data-en="About us">О нас</h3>
+      <p data-ru="Узнайте больше о нашей авиалинии" data-pl="Dowiedz się więcej o naszej linii" data-en="Learn more about our airline">
+        Узнайте больше о нашей авиалинии
+      </p>
+      <a href="onas.html" data-ru="Смотреть больше" data-pl="Zobacz więcej" data-en="See more">Смотреть больше</a>
+    </div>
+  </section>
+
+  <a class="book-btn" href="https://forms.gle/przykladowy-formularz" target="_blank"
+     data-ru="Забронировать билет" data-pl="Zarezerwuj lot" data-en="Book a flight">
+     Забронировать билет
+  </a>
+</main>
+
+<footer class="site-footer">
+  <div class="footer-links">
+    <a href="regulamin.html" data-ru="Правила" data-pl="Regulamin" data-en="Terms of Service">Правила</a>|
+    <a href="polityka.html" data-ru="Политика конфиденциальности" data-pl="Polityka prywatności" data-en="Privacy Policy">Политика конфиденциальности</a>|
+    <a href="kontakt.html" data-ru="Контакт" data-pl="Kontakt" data-en="Contact">Контакт</a>
+  </div>
+  <p data-ru="© 2025 Aeroflot PL. Все права защищены." data-pl="© 2025 Aeroflot PL. Wszelkie prawa zastrzeżone." data-en="© 2025 Aeroflot PL. All rights reserved.">
+     © 2025 Aeroflot PL. Все права защищены.
+  </p>
+</footer>
+
+<script>
+function setLang(lang) {
+  document.querySelectorAll('[data-' + lang + ']').forEach(el => {
+    el.textContent = el.getAttribute('data-' + lang);
+  });
+}
+document.addEventListener('DOMContentLoaded', function() {
+  setLang('ru'); // domyślny język rosyjski
+});
+</script>
+</body>
+</html>
